@@ -1,0 +1,95 @@
+/* Your existing navbar styles stay the same from your file */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: #e4e4e4; 
+    margin: 0;
+}
+
+
+/* HERO SECTION */
+.hero-section-blogs {
+  position: relative;
+  width: 100%;
+  height: 45vh; /* 40% of screen */
+  background: url("../images/ricefields.jpg")
+    center/cover no-repeat;
+}
+
+/* make navbar overlay hero */
+.hero-section-blogs .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 40px;
+  z-index: 10;
+  background: transparent; /* sits on hero */
+  color: white;
+}
+
+/* make links & logo white ONLY in hero */
+.hero-section-blogs .nav-links a,
+.hero-section-blogs .logo span a {
+  color: white;
+}
+
+.hero-section-blogs .nav-links a:hover,
+.hero-section-blogs .logo span:hover {
+  opacity: 0.7;
+}
+
+/* Explore Blogs text */
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+  z-index: 5;
+}
+
+.overlay-text h1 {
+  font-family: 'DM Sans';
+  color: white;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+/* Blog Container */
+.blog-container {
+  flex: 1; /* remaining 60% */
+  overflow-y: auto;
+  min-height: 60vh;  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #e4e4e4;
+}
+
+/* Blog Card */
+.blog-card {
+  width: 90%;
+  background: white;
+  padding: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h2{
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.blog-card p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.blog-page {
+    height: 100%;
+}

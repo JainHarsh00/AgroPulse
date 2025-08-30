@@ -1,0 +1,68 @@
+/* Navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20%;   /* adjust spacing between links */
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  font-family: 'Anonymous Pro', serif;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* vertical align */
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+}
+.logo span a{
+  text-decoration: none;
+  color: black;
+}
+
+.logo span:hover {
+    opacity: 0.7;
+}
+
+.logo-icon {
+  width: 40px; /* keep it proportional to text */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon img {
+  max-width: 150%;
+  max-height: 150%;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #1b1b1b;
+  transition: opacity 0.5s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,125 @@
+/* Full Page Background */
+
+
+/* Main Container */
+.chatbot-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navbar spacing */
+.navbar-space {
+  padding: 16px;
+}
+
+.query-box, .suggestions {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition properties */
+}
+
+.query-box.fade-out, .suggestions.fade-out {
+  opacity: 0;
+  transform: translateY(-20px); /* A slight upward movement as it fades */
+  pointer-events: none; /* Prevents clicking on the buttons while they are fading out */
+}
+
+/* Center Section */
+.chat-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.glow-circle {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #d9e58a, #e4e4e4);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  position: absolute;
+}
+
+.query-box {
+  position: relative;
+  z-index: 2;
+}
+
+.query-box .star {
+  font-size: 24px;
+}
+
+.query-box p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Bottom Section */
+.chat-bottom {
+  padding: 24px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.suggestions button {
+  background-color: #f0f2e3;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.suggestions button:hover {
+  background-color: #e0e3d3;
+}
+
+/* Input Box */
+.chat-input {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  margin: 10px 5px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 8px;
+  color: #555;
+}
+
+.icon-btn:hover {
+  color: #000;
+}
