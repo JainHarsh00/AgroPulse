@@ -1,0 +1,10 @@
+langchain
+langchain-groq
+langchain-community
+dotenv
+python-dotenv
+groq
+pydantic
+langchain-huggingface
+langchain-chroma
+beautifulsoup4
