@@ -1,12 +1,57 @@
-# React + Vite
+# 🌾 AgroPulse  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AgroPulse** is a modern **agri-tech platform** designed to simplify crop trading 🛒 and provide personalized support for farmers 👨‍🌾 through smart features 🤖.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features  
 
-## Expanding the ESLint configuration
+### 🌐 React-based Landing Page  
+- Built with **React (Vite)** ⚡ for fast performance and clean UI.  
+- Serves as the entry point for both **farmers** and **buyers**.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛍️ Marketplace  
+- 👨‍🌾 Farmers can **list crops** they want to sell.  
+- 🛒 Buyers can **browse offers** and explore available products.  
+- 🧾 Conditional UI:  
+  - If no crops are listed → platform prompts farmers to **list first**.  
+  - Once listings are available → system **matches** them with buyers’ needs.  
+
+### 💬 Ollama-Powered Chatbot System  
+- 🤖 AI chatbot integrated with the Node.js backend.  
+- Specially designed for **farmers’ queries** 🌱 (e.g., crop listing help, agri-advice).  
+
+---
+
+## ⚙️ Getting Started  
+
+### ✅ Prerequisites  
+- **Node.js** (vXX or higher) 🌐  
+- **npm** or **yarn** 📦  
+
+### 📥 Installation  
+
+1. **Clone the repository**:  
+   ```bash
+   git clone https://github.com/JainHarsh00/AgroPulse.git
+   cd AgroPulse
+   ```
+2. **Install dependencies**:
+  ```bash
+  cd AgroPulse_Frontend
+  npm install
+  cd ../Backend
+  npm install
+  ```
+
+3. **Configure environment variables 🔑**
+(e.g., DB connection strings, Ollama API keys).
+
+---
+
+## 📂 Folder Structure
+- 👨‍🌾 Farmers: Register → Dashboard → List crops → Match with buyers.
+
+- 💬 Support: Chatbot answers queries in real-time.
+
+---
