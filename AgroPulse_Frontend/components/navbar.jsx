@@ -9,7 +9,7 @@ export default function Navbar() {
             <div className="logo">
               <div className="logo-icon">
                 <img 
-                    src="../images/logo.png" 
+                    src="/logo.png" 
                     alt="icon" 
                 />
 

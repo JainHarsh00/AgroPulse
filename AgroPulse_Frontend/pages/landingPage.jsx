@@ -1,10 +1,11 @@
-import React from "react";
+
 import "../style/landingPage.css";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
 
 export default function LandingPage() {
-  const farmlandSrc = "../images/homepagePhoto.jpg";
+  
+  const farmlandSrc = "/homepagePhoto.jpg";
   return (
     <div className="landing-page">
       <div className="container">

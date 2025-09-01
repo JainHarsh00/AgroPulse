@@ -14,7 +14,7 @@ body {
   position: relative;
   width: 100%;
   height: 45vh; /* 40% of screen */
-  background: url("../images/ricefields.jpg")
+  background: url("/ricefields.jpg")
     center/cover no-repeat;
 }
 

@@ -131,3 +131,10 @@ body {
 .pill:hover .pill-icon {
   transform: scale(1.3); /* makes the + bigger */
 }
+
+@media (max-width: 1604px) {
+  .landing-page {
+    transform-origin: top left;
+    width: 95%; /* counteracts shrinking caused by scale */
+  }
+}

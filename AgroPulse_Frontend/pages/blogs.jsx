@@ -3,6 +3,8 @@ import Navbar from "../components/navbar" // your navbar
 import "../style/Blog.css"
 
 export default function Blogs() {
+
+  
   return (
     <div className="blogs-page">
       {/* Hero Section */}
