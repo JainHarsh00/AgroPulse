@@ -4,9 +4,9 @@ const cors = require('cors');
 require('dotenv').config();
 const path = require('path');
 const app = express();
-const port = 3000
+const port = 5000
 
-const connectDB = require('./models/mongo.js');
+const connectDB = require('./db/mongo.js');
 connectDB();
 
 // Middlewares

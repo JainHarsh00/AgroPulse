@@ -1,5 +1,5 @@
 /* Full Page Background */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Main Container */
 .chatbot-container {
@@ -122,4 +122,154 @@
 
 .icon-btn:hover {
   color: #000;
+}
+
+/* Chat Messages Container */
+.chat-messages {
+  position: absolute;
+  bottom: 0px; /* adjust to sit above input/suggestions */
+  left: 0;
+  right: 0;
+  max-height:125%; /* adjust height of message area */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 24px;
+  z-index: 3;
+}
+
+/* Individual message bubbles */
+.message {
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+/* User messages on the right */
+.message.user {
+  background-color: #4caf50;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+/* Bot messages on the left */
+.message.bot {
+  background-color: #f0f2e3;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+/* Typing indicator */
+.message.bot.typing {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.listening-indicator {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-bottom: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.language-toggle button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.language-toggle button.active {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+}
+
+.listen-btn {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+  transition: color 0.2s;
+}
+.listen-btn:hover {
+  color: #000;
+}
+
+.language-toggle {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 15px;
+}
+
+/* Switch Container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 15px;
+}
+
+/* Circle knob */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  left: 6px;
+  bottom: 6px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When checked */
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(80px);
+}
+
+/* Rounded style */
+.slider.round {
+  border-radius: 34px;
 }

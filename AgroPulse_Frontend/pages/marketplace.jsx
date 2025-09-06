@@ -1,34 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
+import buyers from "../src/data/buyerData";
 import "../style/MarketPlace.css";
 
 export default function Marketplace() {
+  const [formData, setFormData] = useState({
+    crop: "",
+    quantity: "",
+    location: "",
+    price: ""
+  });
+  const [matchedBuyers, setMatchedBuyers] = useState([]);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Filter buyers where crop + location match
+    const matches = buyers.filter(
+      (buyer) =>
+        buyer.crop === formData.crop.toLowerCase() &&
+        buyer.location.toLowerCase() === formData.location.toLowerCase()
+    );
+
+    setMatchedBuyers(matches);
+  };
+
   return (
     <div className="market-container">
-      {/* Navbar always on top */}
       <Navbar />
 
-      {/* Content wrapper (form + buyers) */}
       <div className="marketplace-container">
         {/* Left Form */}
         <div className="form-section">
           <h2>List your crops here...</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Crop *</label>
-            <select required>
+            <select
+              name="crop"
+              value={formData.crop}
+              onChange={handleChange}
+              required
+            >
+              <option value="">-- Select Crop --</option>
               <option value="wheat">Wheat</option>
               <option value="jowar">Jowar</option>
               <option value="barley">Barley</option>
             </select>
 
             <label>Quantity (in quintal) *</label>
-            <input type="text" placeholder="eg: 50, 100" required />
+            <input
+              type="number"
+              name="quantity"
+              placeholder="eg: 50, 100"
+              value={formData.quantity}
+              onChange={handleChange}
+              required
+            />
 
             <label>Location *</label>
-            <input type="text" placeholder="eg: Delhi, Haryana" required />
+            <input
+              type="text"
+              name="location"
+              placeholder="eg: Delhi, Haryana"
+              value={formData.location}
+              onChange={handleChange}
+              required
+            />
 
             <label>Expected Price *</label>
-            <input type="number" placeholder="eg: 2000" required />
+            <input
+              type="number"
+              name="price"
+              placeholder="eg: 2000"
+              value={formData.price}
+              onChange={handleChange}
+              required
+            />
 
             <button type="submit" className="list-btn">
               LIST
@@ -45,41 +96,29 @@ export default function Marketplace() {
         <div className="buyers-section">
           <h2>Available Buyers</h2>
           <div className="buyers-list">
-            <div className="buyer-card">
-              <div className="buyer-info">
-                <p>
-                  <b>Name:</b> XYZ Pvt Ltd
-                </p>
-                <p>
-                  <b>Crop Interest:</b> Wheat
-                </p>
-                <p>
-                  <b>Location:</b> Delhi
-                </p>
-                <p>
-                  <b>Price:</b> 5000
-                </p>
-              </div>
-              <button className="details-btn">View Details</button>
-            </div>
-
-            <div className="buyer-card">
-              <div className="buyer-info">
-                <p>
-                  <b>Name:</b> ABC Traders
-                </p>
-                <p>
-                  <b>Crop Interest:</b> Barley
-                </p>
-                <p>
-                  <b>Location:</b> Haryana
-                </p>
-                <p>
-                  <b>Price:</b> 4500
-                </p>
-              </div>
-              <button className="details-btn">View Details</button>
-            </div>
+            {matchedBuyers.length > 0 ? (
+              matchedBuyers.map((buyer, index) => (
+                <div className="buyer-card" key={index}>
+                  <div className="buyer-info">
+                    <p>
+                      <b>Name:</b> {buyer.name}
+                    </p>
+                    <p>
+                      <b>Crop Interest:</b> {buyer.crop}
+                    </p>
+                    <p>
+                      <b>Location:</b> {buyer.location}
+                    </p>
+                    <p>
+                      <b>Price:</b> {buyer.price}
+                    </p>
+                  </div>
+                  <button className="details-btn">View Details</button>
+                </div>
+              ))
+            ) : (
+              <p>No matching buyers found yet.</p>
+            )}
           </div>
         </div>
       </div>
