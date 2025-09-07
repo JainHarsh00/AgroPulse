@@ -21,7 +21,7 @@ html, body {
   position: relative;
   width: 100%;
   height: 45vh; /* 40% of screen */
-  background: url("/ricefields.jpg")
+  background: url("/static/ricefields.jpg")
     center/cover no-repeat;
 }
 

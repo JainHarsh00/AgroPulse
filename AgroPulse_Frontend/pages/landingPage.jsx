@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   
-  const farmlandSrc = "/homepagePhoto.jpg";
+  const farmlandSrc = "/static/homepagePhoto.jpg";
   return (
     <div className="landing-page">
       <div className="container">

@@ -20,7 +20,7 @@ const ExplorePage = () => {
         </div>
         <div className="card-container">
           <div className="explore-card">
-            <img src="/market.png" alt="Marketplace" />
+            <img src="/static/market.png" alt="Marketplace" />
             <div className="card-content">
               <h3>Marketplace</h3>
               <Link to="/marketplace">
@@ -31,7 +31,7 @@ const ExplorePage = () => {
           </div>
 
           <div className="explore-card">
-            <img src="/hill.jpg" alt="AI Farming Assistant" />
+            <img src="/static/hill.jpg" alt="AI Farming Assistant" />
             <div className="card-content">
               <h3>AI Farming Assistant</h3>
               <Link to="/chatbot">
@@ -41,7 +41,7 @@ const ExplorePage = () => {
           </div>
 
           <div className="explore-card">
-            <img src="/women.jpg" alt="Blogs" />
+            <img src="/static/women.jpg" alt="Blogs" />
             <div className="card-content">
               <h3>Blogs</h3>
               <Link to="/blogs">

@@ -147,6 +147,7 @@ agent = initialize_agent(
 
 # Single entrypoint function the API will call
 def answer_question(question: str) -> str:
+    print("Received message:", question)
     """
     Runs the agent on the question and returns a string reply.
     We call agent.run inside a thread from FastAPI to avoid blocking the event loop.
