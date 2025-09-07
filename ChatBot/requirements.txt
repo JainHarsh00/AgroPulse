@@ -8,3 +8,4 @@ pydantic
 beautifulsoup4
 wikipedia
 fastapi
+uvicorn[standard]==0.29.0
