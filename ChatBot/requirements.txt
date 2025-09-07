@@ -5,9 +5,6 @@ dotenv
 python-dotenv
 groq
 pydantic
-langchain-huggingface
-langchain-chroma
 beautifulsoup4
 wikipedia
 fastapi
-sentence-transformers
