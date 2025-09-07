@@ -5,14 +5,11 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy requirements and install
-COPY Chatbot/requirements.txt .
+COPY ChatBot/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend code
-COPY Chatbot/ . 
-
-# Copy React build
-COPY Chatbot/frontend/dist ./frontend/dist
+# Copy backend code (including frontend/dist)
+COPY ChatBot/ . 
 
 # Expose FastAPI port
 EXPOSE 8000
