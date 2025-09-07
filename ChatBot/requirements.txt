@@ -9,3 +9,4 @@ langchain-huggingface
 langchain-chroma
 beautifulsoup4
 wikipedia
+fastapi
